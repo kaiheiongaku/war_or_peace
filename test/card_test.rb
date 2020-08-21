@@ -6,16 +6,15 @@ require 'pry'
 class CardTest < Minitest::Test
 
   def test_it_exists
-    card = Card.new
+    card = Card.new(:diamond, 'Queen', 12)
     assert_instance_of Card, card
   end
 
-  #
-  # def test_it_has_readable_attributes
-  #   card = Card.new(:diamond, 'Queen', 12)
-  #
-  #   assert_equal :diamond, card.suit
-  #   assert_equal 'Queen', card.value
-  #   assert_equal 12, card.rank
-  # end
+  def test_card_has_readable_attributes
+    card = Card.new(:diamond, 'Queen', 12)
+
+    assert_equal :diamond, card.suit
+    assert_equal 'Queen', card.rank
+    assert_equal 12, card.value
+  end
 end
