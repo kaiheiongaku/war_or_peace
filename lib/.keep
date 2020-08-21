@@ -1,1 +1,3 @@
+require './card'
 
+card = Card.new(:diamond, 'Queen', 12)
