@@ -1,5 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+
 require './lib/card'
 require './lib/deck'
 require 'pry'
@@ -9,11 +8,15 @@ class Player
 
   def initialize(name, deck)
     @name = name
-    @deck = []
+    @deck = deck
   end
 
   def has_lost?
-    deck.length > 0
+    if :deck.length == 0
+      false
+    else
+      true
+    end
   end
 
 
