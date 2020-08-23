@@ -3,6 +3,8 @@ require './lib/deck'
 require './lib/player'
 require './lib/turn'
 require 'pry'
+
+class Game
 #Note to self: there's a way to iterate over the attributes.
 main_deck = Deck.new([
 card1 = Card.new("A", "Spades", 1),

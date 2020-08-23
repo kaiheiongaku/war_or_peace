@@ -25,6 +25,7 @@ class Turn
       player1 = Player.new("Megan", deck1)
       player2 = Player.new("Aurora", deck2)
       turn = Turn.new(player1, player2)
+      #
     else
       p "Come on...input 'GO' so we can play."
     end
