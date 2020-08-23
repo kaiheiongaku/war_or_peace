@@ -1,7 +1,15 @@
+require 'minitest/autorun'
+require 'minitest/pride'
+require './lib/card'
+require './lib/deck'
+require 'pry'
 
 class Player
-  attr_reader :cards
+  attr_reader :name, :deck
 
-  def initialize(cards = [])
-    @cards = cards
+  def initialize(name, deck)
+    @name = name
+    @deck = deck
   end
+
+end
