@@ -37,9 +37,10 @@ class Deck
     high_ranking_cards.length / cards.length.to_f
   end
 
-  #passes test but doesn't permanently changed deck
+  
   def remove_card
-    cards.drop(1)
+    cards.shift
+    return cards
   end
 
   def add_card(card)
