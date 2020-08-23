@@ -13,6 +13,17 @@ class PlayerTest < Minitest::Test
     assert_equal 'Clarissa', player.name
   end
 
+  def test_has_lost?
+    card1 = Card.new(:diamond, 'Queen', 12)
+    card2 = Card.new(:spade, '3', 3)
+    card3 = Card.new(:heart, 'Ace', 14)
+    deck1 = Deck.new([card1, card2, card3])
+    player1 = Player.new('Clarissa', deck1)
+
+    assert_equal false, player1.has_lost?
+  end
+
+
 
 end
 

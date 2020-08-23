@@ -9,7 +9,12 @@ class Player
 
   def initialize(name, deck)
     @name = name
-    @deck = deck
+    @deck = []
   end
+
+  def has_lost?
+    deck.length > 0
+  end
+
 
 end
