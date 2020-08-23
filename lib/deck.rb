@@ -40,7 +40,7 @@ class Deck
 
   def remove_card
     cards.shift
-    return cards
+    
   end
 
   def add_card(card)
