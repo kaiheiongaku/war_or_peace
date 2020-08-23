@@ -35,14 +35,14 @@ class Deck
   def percent_high_ranking
     high_ranking_cards.length / cards.length
   end
-#
-#   def remove_card
-#     cards = cards.shift
-#   end
-#
-#   def add_card(card)
-#     cards = cards << card
-#   end
+
+  def remove_card
+    cards.drop(1)
+  end
+
+  def add_card(card)
+    cards << card
+  end
 
   # def cards
   #   @cards
