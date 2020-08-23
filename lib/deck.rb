@@ -14,8 +14,6 @@ class Deck
     card.rank
   end
 
-
-
   def high_ranking_cards
     array_of_high_ranked = []
 
@@ -29,13 +27,13 @@ class Deck
         array_of_high_ranked.append(card)
       elsif card.value == 'Ace'
         array_of_high_ranked.append(card)
-      return array_of_high_ranked
+      return high_ranked = array_of_high_ranked
       end
     end
   end
 
   def percent_high_ranking
-    cards.high_ranking_cards.length / cards.length
+    high_ranking_cards.length / cards.length
   end
 #
 #   def remove_card
