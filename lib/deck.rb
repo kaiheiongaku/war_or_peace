@@ -14,29 +14,29 @@ class Deck
     card.rank
   end
 
-# high_ranked_cards = []
-#
-#   def high_ranking_cards
-#
-#     card.each do |high_ranking|
-#       high_ranking = []
-#       if card.rank = 'Jack'
-#         high_ranking << card
-#       elsif card.rank = 'Queen'
-#         high_ranking << card
-#       elsif card.rank = 'King'
-#         high_ranking << card
-#       elsif cark.rank = 'Ace'
-#         high_ranking << card
-#       else
-#         next
-#       end
-#       high_ranked_cards << high_ranking
-#     end
-#
-#   def percent_high_ranking
-#     high_ranked_cards.length / cards.length
-#   end
+
+
+  def high_ranking_cards
+    array_of_high_ranked = []
+
+    cards.each do |card|
+
+      if card.value == 'Jack'
+        array_of_high_ranked.append(card)
+      elsif card.value == 'Queen'
+        array_of_high_ranked.append(card)
+      elsif card.value == 'King'
+        array_of_high_ranked.append(card)
+      elsif card.value == 'Ace'
+        array_of_high_ranked.append(card)
+      return array_of_high_ranked
+      end
+    end
+  end
+
+  def percent_high_ranking
+    cards.high_ranking_cards.length / cards.length
+  end
 #
 #   def remove_card
 #     cards = cards.shift
