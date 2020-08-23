@@ -1,6 +1,7 @@
 require './lib/card'
 require './lib/deck'
 require './lib/player'
+require './lib/war_or_peace_runner'
 require 'pry'
 
 class Turn
@@ -12,6 +13,23 @@ class Turn
     @spoils_of_war = spoils_of_war
     @type = type
   end
+
+  def start
+    p "Welcome to War (or Peace). This game will be played with 52 cards."
+    p "The players today are #{player1.name} and #{player2.name}."
+    p "Type 'GO' to start the game!"
+    start_command = gets.chomp
+    if gets.chomp == 'GO'
+      p "YAYY! LET'S PLAY!!"
+      #Could do more inputs here to customize for user.
+      player1 = Player.new("Megan", deck1)
+      player2 = Player.new("Aurora", deck2)
+      turn = Turn.new(player1, player2)
+    else
+      p "Come on...input 'GO' so we can play."
+    end
+  end
+
 
   def winner
     if player1.deck.rank_of_card_at(0) != player2.deck.rank_of_card_at(0)
