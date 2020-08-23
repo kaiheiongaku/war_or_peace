@@ -14,7 +14,7 @@ class CardTest < Minitest::Test
     card = Card.new(:diamond, 'Queen', 12)
 
     assert_equal :diamond, card.suit
-    assert_equal 'Queen', card.rank
-    assert_equal 12, card.value
+    assert_equal 'Queen', card.value
+    assert_equal 12, card.rank
   end
 end
