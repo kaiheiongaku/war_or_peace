@@ -46,21 +46,9 @@ class Turn
       player2.deck.remove_card.remove_card.remove_card
     end
   end
+  #not functional, suspect I need to use flatten to eliminate nested arrays
+  def award_spoils(winner)
+    winner.deck.add_card(spoils_of_war).flatten
+  end
 
-  # def award_spoils(winner)
-  #   winner.deck.add_card(spoils_of_war)
-  # end
-  #
-
-
-
-
-
-  # def winner
-  #   if @type = :basic
-  #     deck.rank_of_card_at(0)
-
-#     end
-#   end
-#
 end
